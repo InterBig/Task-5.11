@@ -33,12 +33,12 @@ article {
 }
 
 article a {
-    color: rgb (33, 37, 41);
+    color: rgb(33, 37, 41);
     text-decoration: none;
 }
 
 article a:hover {
-    color: #0085a1;
+    color: #00a100;
 }
 
 article h2 {
