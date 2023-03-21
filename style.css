@@ -61,12 +61,15 @@ article:nth-child(even) {
     background-color: #90bdc9;
 }
 
-h2:hover::before {
+h2:nth-child(even)::before {
     content: "+";
     background-color: #c99090;
 }
 
-
+h2:hover::before {
+    content: "--";
+    background-color: #c99090;
+}
 
 footer {
     padding-top: 20px;
