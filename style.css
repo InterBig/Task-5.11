@@ -61,6 +61,13 @@ article:nth-child(even) {
     background-color: #90bdc9;
 }
 
+h2:hover::before {
+    content: "+";
+    background-color: #c99090;
+}
+
+
+
 footer {
     padding-top: 20px;
     padding-bottom: 60px;
