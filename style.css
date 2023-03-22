@@ -15,7 +15,7 @@ header {
 
 h1 {
     color: #0051ff;
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -57,19 +57,32 @@ article img {
     object-fit: cover;
 }
 
+/* меняем цыет фона у четных новостей */
 article:nth-child(even) {
     background-color: #90bdc9;
 }
 
-article:nth-child(1) h2::before, 
-article:nth-child(2) h2::before {
-    content: "++";
-    background-color: #c99090;
+/* меняем цвет фона у четных новостей при наведении */
+article:nth-child(even):hover {
+    background-color: #92c990;
 }
 
+/*меняем цвет фона у остальных новостей при наведении, так как приоритет ниже чем у вышестоящего стиля */
+article:hover {
+    background-color: #c9c890;
+}
+
+/*добавляем текст с помощью псевдоэлемента 1ой и 2ой записи*/
+article:nth-child(1) h2::before, 
+article:nth-child(2) h2::before {
+    content: "New ";
+    color: rgb(255, 0, 0);
+}
+
+/*добавляем текст при наведении с помощью псевдоэлемента*/
 a h2:hover::before {
-    content: "--";
-    background-color: #c99090;
+    content: "Читайте ";
+    color: rgb(255, 0, 0);
 }
 
 footer {
